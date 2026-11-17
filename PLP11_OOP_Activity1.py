@@ -75,5 +75,33 @@ class FirstClass(Passenger):
             f"Suite Number: {self.suite_number}\n"
             f"Chauffeur Service: {self.chauffeur_service}"
         )
+    
+# ==========================================
+# INPUT VALIDATION
+# ==========================================
+
+def get_non_empty_input(prompt):
+    while True:
+        value = input(prompt).strip()
+
+        if value:
+            return value
+
+        print("Error: This field cannot be empty. Please try again.")
+
+
+def get_chauffeur_choice():
+    while True:
+        choice = input(
+            "Do you want chauffeur service? (yes/no): "
+        ).strip().lower()
+
+        if choice in ["yes", "y"]:
+            return True
+        elif choice in ["no", "n"]:
+            return False
+        else:
+            print("Invalid choice. Please enter yes or no.")
+
 
 
