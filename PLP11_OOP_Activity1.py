@@ -22,3 +22,19 @@ class Passenger:
 
     def get_weight_allowance(self):
         return 20
+
+    
+# ==========================================
+# MEMBER 2: CHILD CLASS - ECONOMY
+# ==========================================
+
+class Economy(Passenger):
+
+    def __init__(self, name, location, destination, date,
+                 seat_preference):
+
+        super().__init__(name, location, destination, date)
+        self.seat_preference = seat_preference
+
+    def get_class_details(self):
+        return f"Seat Preference: {self.seat_preference}"
