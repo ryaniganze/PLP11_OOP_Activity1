@@ -202,3 +202,11 @@ def book_ticket():
     print("Thank you for booking with us!")
     print("=================================")
 
+
+
+# ========================================
+# MAIN PROGRAM
+# ========================================
+
+if __name__ == "__main__":
+    book_ticket()
