@@ -25,7 +25,7 @@ class Passenger:
 
     
 # ==========================================
-# MEMBER 2: CHILD CLASS - ECONOMY
+# CHILD CLASS - ECONOMY
 # ==========================================
 
 class Economy(Passenger):
