@@ -38,3 +38,24 @@ class Economy(Passenger):
 
     def get_class_details(self):
         return f"Seat Preference: {self.seat_preference}"
+    
+# ==========================================
+# CHILD CLASS - BUSINESS
+# ==========================================
+
+class Business(Passenger):
+
+    def __init__(self, name, location, destination, date,
+                 lounge_pass_code):
+
+        super().__init__(name, location, destination, date)
+        self.lounge_pass_code = lounge_pass_code
+
+    # Method overriding
+    def get_weight_allowance(self):
+        return 100
+
+    def get_class_details(self):
+        return f"Lounge Pass Code: {self.lounge_pass_code}"
+
+
