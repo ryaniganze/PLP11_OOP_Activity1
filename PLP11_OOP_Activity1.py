@@ -57,5 +57,23 @@ class Business(Passenger):
 
     def get_class_details(self):
         return f"Lounge Pass Code: {self.lounge_pass_code}"
+# ==========================================
+# CHILD CLASS - FIRST CLASS
+# ==========================================
+
+class FirstClass(Passenger):
+
+    def __init__(self, name, location, destination, date,
+                 suite_number, chauffeur_service):
+
+        super().__init__(name, location, destination, date)
+        self.suite_number = suite_number
+        self.chauffeur_service = chauffeur_service
+
+    def get_class_details(self):
+        return (
+            f"Suite Number: {self.suite_number}\n"
+            f"Chauffeur Service: {self.chauffeur_service}"
+        )
 
 
